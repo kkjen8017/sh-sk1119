@@ -7,15 +7,17 @@
 import { connect } from 'cloudflare:sockets';
 
 let subPath = 'link';     // 节点订阅路径,不修改将使用uuid作为订阅路径
-let password = '123456';  // 主页密码,建议修改或添加 PASSWORD环境变量
+let password = 'yxc19930727';  // 主页密码,建议修改或添加 PASSWORD环境变量
 let proxyIP = '210.61.97.241:81';  // proxyIP
-let yourUUID = '5dc15e15-f285-4a9d-959b-0e4fbdd77b63'; // UUID,建议修改或添加环境便量
+let yourUUID = '146c9b74-6f94-49eb-b902-a8ddf338080c'; // UUID,建议修改或添加环境便量
 let disabletro = false;  // 是否关闭trojan, 设置为true时关闭，false开启 
 
 // CDN 
 let cfip = [ // 格式:优选域名:端口#备注名称、优选IP:端口#备注名称、[ipv6优选]:端口#备注名称、优选域名#备注 
     'mfa.gov.ua#SG', 'saas.sin.fan#HK', 'store.ubi.com#JP','cf.130519.xyz#KR','cf.008500.xyz#HK', 
-    'cf.090227.xyz#SG', 'cf.877774.xyz#HK','cdns.doon.eu.org#JP','sub.danfeng.eu.org#TW','cf.zhetengsha.eu.org#HK'
+    'cf.090227.xyz#SG', 'cf.877774.xyz#HK','cdns.doon.eu.org#JP','sub.danfeng.eu.org#TW','blog.cloudflare.com',
+	'developers.cloudflare.com','radar.cloudflare.com','one.dash.cloudflare.com','workers.cloudflare.com','pages.cloudflare.com',
+	'www.web.com','wto.org','www.visa.com.sg','ip.sb','cf.zhetengsha.eu.org#HK'
 ];  // 在此感谢各位大佬维护的优选域名
 
 function closeSocketQuietly(socket) { 
